@@ -10,6 +10,7 @@ All of the included plugins are pinned to a version that ensures they are compat
 
 As I mentioned, this config is meant as a starting point for people new to Neovim who want a familiar IDE experience. The config has a very simple structure that makes it easy to add new plugins.
 
+
 ## Install Neovim 0.8
 
 You can install Neovim with your package manager e.g. brew, apt, pacman etc.. but remember that when you update your packages Neovim may be upgraded to a newer version.
@@ -83,6 +84,21 @@ We will also need `ripgrep` for Telescope to work:
 
   ```sh
   sudo apt install ripgrep
+  ```
+
+Use `lazygit` for git integration:
+
+- Lazygit
+  ```sh
+  LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+  ```
+
+  ```
+  curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+  ```
+
+  ```
+  sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
   ```
 
 ---
