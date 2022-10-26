@@ -69,7 +69,7 @@ Next we need to install python support (node is optional)
 - Neovim python support
 
   ```sh
-  pip install pynvim
+  pip install pynvim pyright black
   ```
 
 - Neovim node support
