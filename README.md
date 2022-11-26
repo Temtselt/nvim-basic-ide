@@ -27,12 +27,18 @@ make CMAKE_BUILD_TYPE=Release
 sudo make install
 ```
 
+or with tarball:
+```sh
+tar xzvf nvim-linux64.tar.gz
+./nvim-linux64/bin/nvim
+```
+
 ## Install the config
 
 Make sure to remove or move your current `nvim` directory
 
 ```sh
-git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
+git clone https://github.com/Temtselt/nvim-basic-ide.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed
@@ -79,7 +85,7 @@ Next we need to install python support (node is optional)
 - Neovim python support
 
   ```sh
-  pip install pynvim pyright black
+  pip install pynvim pyright black flake8
   ```
 
 - Neovim node support
@@ -87,6 +93,8 @@ Next we need to install python support (node is optional)
   ```sh
   npm i -g neovim
   ```
+
+And clangd for c/c++ support.
 
 We will also need `ripgrep` for Telescope to work:
 
