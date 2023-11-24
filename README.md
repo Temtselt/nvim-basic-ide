@@ -71,13 +71,10 @@ First we'll fix copy/paste
   sudo apt install xsel # for X11
   sudo apt install wl-clipboard # for wayland
   ```
-- On Wsl 
-
+- For Wsl
+  Just install win32yank on windows
   ```sh
-  curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
-  unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
-  chmod +x /tmp/win32yank.exe
-  sudo mv /tmp/win32yank.exe /usr/local/bin/
+  choco install win32yank
   ```
 
 Next we need to install python support (node is optional)
