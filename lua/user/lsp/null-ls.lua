@@ -13,7 +13,6 @@ null_ls.setup({
   debug = false,
   sources = {
     formatting.stylua,
-    formatting.rusfmt,
     formatting.isort,
     formatting.black.with({ extra_args = { "--fast" } }),
     diagnostics.flake8
