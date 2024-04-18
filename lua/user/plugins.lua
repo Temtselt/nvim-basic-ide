@@ -60,7 +60,7 @@ return packer.startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" })
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
 	use({ "machakann/vim-sandwich" })
-  use({ "hedyhli/outline.nvim" })
+	use({ "liuchengxu/vista.vim" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
@@ -85,7 +85,14 @@ return packer.startup(function(use)
 	use({ "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" })
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" })
-  use({ "github/copilot.vim" })
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({})
+		end,
+	})
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
@@ -93,7 +100,6 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	})
 
 	-- Git
